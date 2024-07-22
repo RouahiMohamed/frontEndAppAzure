@@ -2,7 +2,6 @@
 FROM node:latest as build
 WORKDIR /app
 COPY . .
-RUN ng cache clean
 RUN npm install --legacy-peer-deps
 RUN npm run build -- --configuration production
 
